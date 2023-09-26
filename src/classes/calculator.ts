@@ -1,5 +1,17 @@
+/**
+ * A utility class for calculating distances between geographic coordinates using the Haversine formula.
+ */
 class Calculator {
 
+    /**
+     * Calculates the great-circle distance between two sets of geographic coordinates using the Haversine formula.
+     *
+     * @param {number} lat1 - The latitude of the first location in degrees.
+     * @param {number} lon1 - The longitude of the first location in degrees.
+     * @param {number} lat2 - The latitude of the second location in degrees.
+     * @param {number} lon2 - The longitude of the second location in degrees.
+     * @returns {number} - The distance in kilometers between the two locations.
+     */
     static distance(
         lat1: number,
         lon1: number,

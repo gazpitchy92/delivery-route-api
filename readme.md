@@ -1,11 +1,19 @@
 # Delivery Route API
 
+This is a Express.js application that calculates a route on Google Maps based on a list of postcodes. The application uses the OpenCage Geocoding API to obtain the geographic coordinates (latitude and longitude) of postcodes, sorts them by distance from a starting location, and generates a Google Maps URL for the route.
+
 Problem: Our delivery driver has a list of Postcodes they need to drop-off at, they need to find the quickest route to all of them.
 
-Solution: This API can be used in a web application or form. It takes in the drivers starting postcode and the delivery postcodes, looks up the latitude and longitude for the postcodes, then arranges into the most economic route on google maps. 
+Solution: It takes in the drivers starting postcode and the delivery postcodes, looks up the latitude and longitude for the postcodes, then arranges into the most economic route on google maps. 
 
 
 ## Building
+
+Set your OpenCage API key in the opencageApiKey variable in the index.ts file:
+
+```typescript
+const opencageApiKey = 'your-opencage-api-key';
+```
 
 This project is written in type script, to compile run:
 
@@ -17,7 +25,7 @@ npx tsc
 
 To run use the following code to host the API on http://localhost:3001
 
-```python
+```typescript
 node src/index.ts
 ```
 
